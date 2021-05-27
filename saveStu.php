@@ -26,7 +26,8 @@ $rwo=mysqli_fetch_assoc($result);
 $x=$rwo['JobDesc'];
 $y=$rwo['CompanyName'];
 $inter=$rwo['InterviewDate'];
-$qry="INSERT INTO `stureg_tbl`(`userName`, `StuID`, `StuName`, `StuFName`, `StuDOB`, `ContactNo`, `StuEmail`, `Stream`, `Course`, `LastScore`, `AreaOfInterest`, `JobID`, `JobName`, `Company name`,`InterviewDate`) VALUES ('$un','$rno','$snam','$fnam','$dob','$ph','$email','$strm','$cors','$scor','$areaInt','$appjob','$x','$y','$inter')";
+$qry="INSERT INTO `stureg_tbl` (`userName`, `StuID`, `StuName`, `StuFName`, `StuDOB`, `ContactNo`, `StuEmail`, `Stream`, `Course`, `LastScore`, `AreaOfInterest`, `JobID`, `JobName`, `Company name`, `result`, `InterviewDate`) VALUES
+('$un','$rno','$snam','$fnam','$dob','$ph','$email','$strm','$cors','$scor','$areaInt','$appjob','$x','$y',' ','$inter')";
 $x=mysqli_query($con,$qry);
 	
 	if ($x)
