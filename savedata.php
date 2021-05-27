@@ -25,18 +25,18 @@ and !empty($_POST["salPack"]) and !empty($_POST["Loc"]) )
 		$qry="SELECT max(JobID) AS maxid FROM placementdb";
                $con=mysqli_connect("remotemysql.com","Bvi6TRjeoH","aD13zcazgh","Bvi6TRjeoH");
 		$run=mysqli_query($con,$qry);
+	if($run){
 		while ($rows=mysqli_fetch_array($run))
 		{
 			$jid=$rows[0];
-		}	
+		}}	
 
 
 
-		$qry="
-INSERT INTO `placement_tbl` (`JobID`, `JobDesc`, `CompanyName`, `PostDate`, `InterviewDate`, `ExpDate`, `Stream`, `Qualification`, `OtherReq`, `SalPackage`, `Location`) VALUES
+		$qry="INSERT INTO `placement_tbl` (`JobID`, `JobDesc`, `CompanyName`, `PostDate`, `InterviewDate`, `ExpDate`, `Stream`, `Qualification`, `OtherReq`, `SalPackage`, `Location`) VALUES
  ('$jid+1','$jd','$cmp','$pd','$idt','$exdt','$strm','$Qual','$oreq','$SalPack','$Loc')";
-
-		if (mysqli_query($con,$qry))
+$x=mysqli_query($con,$qry);
+		if ($x)
 			{
 				
 				echo "<script>alert('Data saved');</script>";
