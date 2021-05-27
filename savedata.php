@@ -23,7 +23,7 @@ and !empty($_POST["salPack"]) and !empty($_POST["Loc"]) )
 		$Loc=$_POST["Loc"];
 
 		$qry="SELECT max(JobID) AS maxid FROM placementdb";
-
+               $con=mysqli_connect("remotemysql.com","Bvi6TRjeoH","aD13zcazgh","Bvi6TRjeoH");
 		$run=mysqli_query($con,$qry);
 		while ($rows=mysqli_fetch_array($run))
 		{
