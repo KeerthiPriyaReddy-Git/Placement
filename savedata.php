@@ -12,6 +12,7 @@ and !empty($_POST["salPack"]) and !empty($_POST["Loc"]) )
 		session_start();
 		$un=$_SESSION['username'];
 		$jd=$_POST["JobDesc"];
+		$jid=$_POST["JobID"];
 		$cmp=$_POST["Company"];
 		$pd=$_POST["PostDate"];
 		$idt=$_POST["Interdate"];
@@ -22,19 +23,7 @@ and !empty($_POST["salPack"]) and !empty($_POST["Loc"]) )
 		$SalPack=$_POST["salPack"];
 		$Loc=$_POST["Loc"];
 
-		$qry="SELECT max(JobID) AS maxid FROM placementdb";
                $con=mysqli_connect("remotemysql.com","Bvi6TRjeoH","aD13zcazgh","Bvi6TRjeoH");
-		$run=mysqli_query($con,$qry);
-	if($run){
-		$hy=mysqli_num_rows($run);
-		while ($rows=mysqli_fetch_array($run))
-		{
-			$jid=$rows[$hy];
-			echo $jid;
-		}}	
-
-
-
 		$qry="INSERT INTO `placement_tbl` (`JobID`, `JobDesc`, `CompanyName`, `PostDate`, `InterviewDate`, `ExpDate`, `Stream`, `Qualification`, `OtherReq`, `SalPackage`, `Location`) VALUES
  ($jid+1,'$jd','$cmp','$pd','$idt','$exdt','$strm','$Qual','$oreq','$SalPack','$Loc')";
 $x=mysqli_query($con,$qry);
