@@ -26,9 +26,10 @@ and !empty($_POST["salPack"]) and !empty($_POST["Loc"]) )
                $con=mysqli_connect("remotemysql.com","Bvi6TRjeoH","aD13zcazgh","Bvi6TRjeoH");
 		$run=mysqli_query($con,$qry);
 	if($run){
+		$hy=mysqli_num_rows($run);
 		while ($rows=mysqli_fetch_array($run))
 		{
-			$jid=$rows[0];
+			$jid=$rows[$hy];
 		}}	
 
 
