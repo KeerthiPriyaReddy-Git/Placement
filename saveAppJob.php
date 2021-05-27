@@ -30,7 +30,7 @@ $v=$xyz['CompanyName'];
 $inte=$xyz['InterviewDate'];
 echo $c;
 }
-$qry="INSERT INTO `stureg_tbl`(`userName`, `StuID`, `StuName`, `StuFName`, `StuDOB`, `ContactNo`, `StuEmail`, `Stream`, `Course`, `LastScore`, `AreaOfInterest`, `JobID`, `JobName`, `Company name`, `InterviewDate`)VALUES ('$sid','$stuid','$stna','$stufn','$studob','$Cont','$sem','$strem','$stre','$scor','$areaInt','$jid','$c','$v','$inte')";
+$qry="INSERT INTO `stureg_tbl`(`userName`, `StuID`, `StuName`, `StuFName`, `StuDOB`, `ContactNo`, `StuEmail`, `Stream`, `Course`, `LastScore`, `AreaOfInterest`, `JobID`, `JobName`, `Company name`,`result`, `InterviewDate`)VALUES ('$sid','$stuid','$stna','$stufn','$studob','$Cont','$sem','$strem','$stre','$scor','$areaInt','$jid','$c','$v',' ','$inte')";
 $qqq=mysqli_query($con,$qry);
 if ($qqq)
 	{
