@@ -32,9 +32,11 @@ and !empty($_POST["salPack"]) and !empty($_POST["Loc"]) )
 
 
 
-		$qry="insert into placement_tbl values ($jid+1,'$jd','$cmp','$pd','$idt','$exdt','$strm','$Qual','$oreq','$SalPack','$Loc')";
+		$qry="
+INSERT INTO `placement_tbl` (`JobID`, `JobDesc`, `CompanyName`, `PostDate`, `InterviewDate`, `ExpDate`, `Stream`, `Qualification`, `OtherReq`, `SalPackage`, `Location`) VALUES
+ ('$jid+1','$jd','$cmp','$pd','$idt','$exdt','$strm','$Qual','$oreq','$SalPack','$Loc')";
 
-		if (mysqli_query($con,$qry)==true)
+		if (mysqli_query($con,$qry))
 			{
 				
 				echo "<script>alert('Data saved');</script>";
