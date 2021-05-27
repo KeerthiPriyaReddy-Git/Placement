@@ -25,7 +25,7 @@ and !empty($_POST["salPack"]) and !empty($_POST["Loc"]) )
 
                $con=mysqli_connect("remotemysql.com","Bvi6TRjeoH","aD13zcazgh","Bvi6TRjeoH");
 		$qry="INSERT INTO `placement_tbl` (`JobID`, `JobDesc`, `CompanyName`, `PostDate`, `InterviewDate`, `ExpDate`, `Stream`, `Qualification`, `OtherReq`, `SalPackage`, `Location`) VALUES
- ($jid+1,'$jd','$cmp','$pd','$idt','$exdt','$strm','$Qual','$oreq','$SalPack','$Loc')";
+ ($jid,'$jd','$cmp','$pd','$idt','$exdt','$strm','$Qual','$oreq','$SalPack','$Loc')";
 $x=mysqli_query($con,$qry);
 		if ($x)
 			{
