@@ -30,6 +30,7 @@ and !empty($_POST["salPack"]) and !empty($_POST["Loc"]) )
 		while ($rows=mysqli_fetch_array($run))
 		{
 			$jid=$rows[$hy];
+			echo $jid;
 		}}	
 
 
